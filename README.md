@@ -1,3 +1,50 @@
-ConnectHub is a real-time, multi-user WebRTC video collaboration web application designed with a floral-themed interface to replicate a private, WhatsApp-style group calling and messaging experience directly inside the browser. Built on a peer-to-peer mesh architecture, the platform enables simultaneous multi-participant video conferencing where each user gets an adaptive, compact video feed with naturally oriented remote streams and mirrored local previews. Prioritizing user privacy, all calls initiate with the camera muted by default, displaying a profile avatar placeholder until manually toggled on. In addition to video and audio communication, ConnectHub features an in-app calling mechanism that allows participants to ring other online friends directly by username—complete with real-time call accept and decline alerts—eliminating the need to copy and exchange third-party room links. The workspace integrates an interactive group chat supporting instant text communication, screen sharing with unmirrored local presentation previews, and live media sharing for images and videos.
+# Real-Time Communication App
 
-On the technical side, ConnectHub is powered by a React and Vite frontend coupled with a Node.js and Express backend utilizing Socket.IO for real-time signaling. WebRTC session negotiations—including SDP offers, answers, and ICE candidate exchanges through Google's public STUN servers—are managed over custom socket events alongside room state tracking. The application is configured to run smoothly across multiple laptops and mobile devices over local Wi-Fi networks and personal mobile hotspots, leveraging exposed Vite network host configurations, automated Windows firewall rule management, and browser security flag adjustments to ensure seamless media stream authorization over local environments.
+A full-stack real-time communication application featuring live chat, room/channel messaging, and presence updates. Built with a React + Vite frontend and a Node.js + Socket.IO backend.
+
+---
+
+## Features
+
+- **Real-Time Messaging**: Instant message delivery using WebSockets via Socket.IO.
+- **Rooms & Channels**: Join, leave, and switch between communication rooms.
+- **Responsive UI**: Clean interface built with modern React components and standard styling[cite: 2].
+- **Fast Build Tooling**: Frontend powered by Vite for rapid development and bundling[cite: 2].
+
+---
+
+## Tech Stack
+
+### Frontend (`client/`)
+- [React](https://react.dev/)[cite: 2]
+- [Vite](https://vitejs.dev/)[cite: 2]
+- [Socket.IO Client](https://socket.io/docs/v4/client-api/)[cite: 2]
+- CSS3[cite: 2]
+
+### Backend (`server/`)
+- [Node.js](https://nodejs.org/)[cite: 2]
+- [Express](https://expressjs.com/)[cite: 2]
+- [Socket.IO](https://socket.io/)[cite: 2]
+- [CORS](https://www.npmjs.com/package/cors)[cite: 2]
+
+---
+
+## Project Structure
+
+```text
+real_time_communication-main/
+├── client/                     # Frontend client application
+│   ├── public/                 # Static assets (favicons, SVG sprites)
+│   ├── src/
+│   │   ├── assets/             # Images and logos
+│   │   ├── App.css             # Main component styles
+│   │   ├── App.jsx             # Chat interface and connection logic
+│   │   ├── index.css           # Global CSS
+│   │   └── main.jsx            # React root mount
+│   ├── index.html              # HTML entry template
+│   ├── package.json            # Client dependencies and scripts
+│   └── vite.config.js          # Vite build configuration
+├── server/                     # Backend WebSocket service
+│   ├── server.js               # Express & Socket.IO server entry point
+│   └── package.json            # Server dependencies and scripts
+└── README.md
