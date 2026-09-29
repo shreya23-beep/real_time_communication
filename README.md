@@ -11,7 +11,15 @@ A full-stack real-time communication application featuring live chat, room/chann
 - **Responsive UI**: Clean interface built with modern React components and standard styling[cite: 2].
 - **Fast Build Tooling**: Frontend powered by Vite for rapid development and bundling[cite: 2].
 
----
+--What it does:
+
+• Live Video & Audio: Multi-user video conferencing with controls for camera, mic, and screen sharing.
+
+• Real-Time Group Chat: Instant messaging with dedicated lounges and member activity updates.
+
+• Built-in Collaboration: Screen sharing and interactive tools for effortless teamwork.
+
+• File & Media Sharing: Direct in-session document and file exchange.-
 
 ## Tech Stack
 
